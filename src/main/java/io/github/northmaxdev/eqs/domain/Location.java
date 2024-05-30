@@ -24,13 +24,11 @@
 
 package io.github.northmaxdev.eqs.domain;
 
-import jakarta.annotation.Nonnull;
-
 import java.util.Objects;
 
-public record Location(@Nonnull Coordinates coordinates, @Nonnull String title) {
+public record Location(Coordinates coordinates, String title) {
 
-    public Location(@Nonnull Coordinates coordinates, @Nonnull String title) {
+    public Location(Coordinates coordinates, String title) {
         this.coordinates = Objects.requireNonNull(coordinates, "null location coordinates");
         this.title = switch (title) {
             case null -> throw new NullPointerException("null location title");

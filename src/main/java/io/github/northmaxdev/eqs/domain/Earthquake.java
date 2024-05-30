@@ -24,21 +24,19 @@
 
 package io.github.northmaxdev.eqs.domain;
 
-import jakarta.annotation.Nonnull;
-
 import java.time.Instant;
 import java.util.Objects;
 
-public record Earthquake(double magnitude, @Nonnull Location location, @Nonnull Instant occurrenceTimestamp) implements Comparable<Earthquake> {
+public record Earthquake(double magnitude, Location location, Instant occurrenceTimestamp) implements Comparable<Earthquake> {
 
-    public Earthquake(double magnitude, @Nonnull Location location, @Nonnull Instant occurrenceTimestamp) {
+    public Earthquake(double magnitude, Location location, Instant occurrenceTimestamp) {
         this.magnitude = magnitude;
         this.location = Objects.requireNonNull(location, "null earthquake location");
         this.occurrenceTimestamp = Objects.requireNonNull(occurrenceTimestamp, "null earthquake occurrence timestamp");
     }
 
     @Override
-    public int compareTo(@Nonnull Earthquake other) {
+    public int compareTo(Earthquake other) {
         Objects.requireNonNull(other);
         return Double.compare(this.magnitude, other.magnitude);
     }
