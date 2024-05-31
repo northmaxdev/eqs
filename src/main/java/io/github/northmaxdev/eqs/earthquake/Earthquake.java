@@ -22,7 +22,9 @@
  * SOFTWARE.
  */
 
-package io.github.northmaxdev.eqs.domain;
+package io.github.northmaxdev.eqs.earthquake;
+
+import io.github.northmaxdev.eqs.location.Location;
 
 import java.time.Instant;
 import java.util.Objects;
