@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.northmaxdev.eqs.domain;
+package io.github.northmaxdev.eqs.location;
 
 import java.util.Objects;
 
