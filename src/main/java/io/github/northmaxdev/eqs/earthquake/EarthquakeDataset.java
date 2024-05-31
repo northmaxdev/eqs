@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.northmaxdev.eqs.domain;
+package io.github.northmaxdev.eqs.earthquake;
 
 import java.util.Collection;
 import java.util.DoubleSummaryStatistics;
